@@ -1,5 +1,5 @@
 {
-  "name": "chippy",
+  "name": "@laminasignal/chippy",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/index.js",
