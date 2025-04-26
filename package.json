@@ -1,10 +1,10 @@
 {
   "name": "@laminasignal/chippy",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "./dist/index.js",
   "module": "./esm/index.js",
   "type": "module",
-  "types": "./dist/index.d.ts",
+  "types": "./types/index.d.ts",
   "scripts": {
     "build": "babel src --out-dir esm --extensions .ts --presets @babel/preset-env,@babel/preset-typescript --no-babelrc && babel src --out-dir cjs --extensions .ts --presets @babel/preset-env,@babel/preset-typescript --no-babelrc --plugins @babel/plugin-transform-modules-commonjs"
   },
