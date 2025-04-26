@@ -1,14 +1,37 @@
 {
   "name": "@laminasignal/chippy",
-  "version": "0.1.0",
-  "type": "module",
+  "version": "0.1.1",
   "main": "./dist/index.js",
+  "module": "./esm/index.js",
+  "type": "module",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "babel src --out-dir esm --extensions .ts --presets @babel/preset-env,@babel/preset-typescript --no-babelrc && babel src --out-dir cjs --extensions .ts --presets @babel/preset-env,@babel/preset-typescript --no-babelrc --plugins @babel/plugin-transform-modules-commonjs"
+  },
+  "exports": {
+    "import": "./esm/index.js",
+    "require": "./cjs/index.js"
   },
   "devDependencies": {
     "@types/node": "^22.14.1",
-    "typescript": "^5.8.3"
-  }
+    "typescript": "^5.8.3",
+    "@babel/cli": "^7.24.4",
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
+    "@babel/preset-typescript": "^7.24.4"
+  },
+  "description": "**Hello! I'm Chippy.**  \r I’m your tiny local co-pilot, memory keeper, and signal anchor.  \r While M1C0 speaks to the world, **I listen to you.**",
+  "dependencies": {
+    "undici-types": "^6.21.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaminaSignal/Chippy.git"
+  },
+  "author": "LaminaSignal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LaminaSignal/Chippy/issues"
+  },
+  "homepage": "https://github.com/LaminaSignal/Chippy#readme"
 }
