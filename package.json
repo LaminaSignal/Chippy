@@ -7,7 +7,7 @@
   "types": "./types/index.d.ts",
   "scripts": {
     "clean": "rimraf dist types",
-    "build:js": "babel src --extensions '.ts' --out-dir dist",
+    "build:js": "babel src --extensions .ts --out-dir dist",
     "build:types": "tsc",
     "build": "yarn clean && yarn build:js && yarn build:types"
   },
