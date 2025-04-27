@@ -1,4 +1,4 @@
-import { LOG_DIR, LOG_FILE } from "./constants";
+import { LOG_DIR, LOG_FILE } from "../../utils/constants";
 import fs from 'fs';
 
 export function initChippy(): void {

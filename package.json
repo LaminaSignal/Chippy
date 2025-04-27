@@ -20,10 +20,12 @@
     "@babel/preset-env": "^7.24.4",
     "@babel/preset-typescript": "^7.24.4",
     "@types/node": "^22.14.1",
+    "@types/pg": "^8.11.14",
     "typescript": "^5.8.3"
   },
   "description": "**Hello! I'm Chippy.**  \r I’m your tiny local co-pilot, memory keeper, and signal anchor.  \r While M1C0 speaks to the world, **I listen to you.**",
   "dependencies": {
+    "pg": "^8.15.1",
     "undici-types": "^6.21.0"
   },
   "repository": {

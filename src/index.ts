@@ -1,12 +1,6 @@
-import { initChippy } from "./utils/init";
-import { speak } from "./utils/speak";
+import { Chippy, IChippy } from "./core";
 
-initChippy();
-
-const chippy = {
-  speak
-}
-
+const chippy: IChippy = Chippy.getInstance();
 export default chippy;
 
 
