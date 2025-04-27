@@ -1,2 +1,5 @@
-export declare function initChippy(): void;
-export declare function speak(message: string): void;
+import { speak } from "./utils/speak";
+declare const chippy: {
+    speak: typeof speak;
+};
+export default chippy;
