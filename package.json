@@ -4,7 +4,11 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "clean": "rimraf lib types",
+    "build:js": "babel ./src --extensions .ts --out-dir ./dist",
+    "build:types": "tsc",
+    "build": "yarn clean && yarn build:js && yarn build:types",
+    "start": "node dist/index.js"
   },
   "exports": {
     "import": "./dist/index.js",
