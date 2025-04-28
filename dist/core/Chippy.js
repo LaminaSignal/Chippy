@@ -23,11 +23,17 @@ var Chippy = exports.Chippy = /*#__PURE__*/function () {
   }
   return _createClass(Chippy, [{
     key: "dbClient",
+    get: function get() {
+      return this._dbClient;
+    },
     set: function set(dbClient) {
       this._dbClient = dbClient;
     }
   }, {
     key: "telemetryTableName",
+    get: function get() {
+      return this._telemetryTableName;
+    },
     set: function set(tableName) {
       if (!tableName) {
         return;
@@ -49,11 +55,11 @@ var Chippy = exports.Chippy = /*#__PURE__*/function () {
   }, {
     key: "pulse",
     value: function pulse(eventType, payload) {
-      if (!this._dbClient) {
+      if (!this.dbClient) {
         this.speak('Chippy tried to log telemetry but no DB client was set.');
         return;
       }
-      (0, _pulse2.pulse)(this._dbClient, this._telemetryTableName, eventType, payload);
+      (0, _pulse2.pulse)(this.dbClient, this.telemetryTableName, eventType, payload);
     }
   }, {
     key: "configureChippy",
