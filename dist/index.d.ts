@@ -1,5 +1,3 @@
-import { speak } from "./utils/speak";
-declare const chippy: {
-    speak: typeof speak;
-};
+import { IChippy } from "./core";
+declare const chippy: IChippy;
 export default chippy;
