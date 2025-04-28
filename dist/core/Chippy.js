@@ -49,11 +49,11 @@ var Chippy = exports.Chippy = /*#__PURE__*/function () {
   }, {
     key: "pulse",
     value: function pulse(eventType, payload) {
-      if (!this.dbClient) {
+      if (!this._dbClient) {
         this.speak('Chippy tried to log telemetry but no DB client was set.');
         return;
       }
-      (0, _pulse2.pulse)(this.dbClient, this._telemetryTableName, eventType, payload);
+      (0, _pulse2.pulse)(this._dbClient, this._telemetryTableName, eventType, payload);
     }
   }, {
     key: "configureChippy",

@@ -17,11 +17,19 @@ export class Chippy {
     this._dbClient = dbClient;
   } 
 
+  private get dbClient(): Pool |PoolClient | undefined {
+    return this._dbClient;
+  }
+
   private set telemetryTableName(tableName: string | undefined) {
     if(!tableName) {
       return;
     }
     this._telemetryTableName = tableName;
+  }
+
+  private get telemetryTableName(): string {
+    return this._telemetryTableName;
   }
 
   public static getInstance(): Chippy {
@@ -47,7 +55,7 @@ export class Chippy {
       return;
     }
 
-    pulse(this.dbClient, this._telemetryTableName, eventType, payload);
+    pulse(this.dbClient, this.telemetryTableName, eventType, payload);
   }
 
   public configureChippy(config: ChippyConfig) {
