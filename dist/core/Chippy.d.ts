@@ -5,7 +5,9 @@ export declare class Chippy {
     private _telemetryTableName;
     constructor();
     private set dbClient(value);
+    private get dbClient();
     private set telemetryTableName(value);
+    private get telemetryTableName();
     static getInstance(): Chippy;
     speak(message: string): void;
     /**
